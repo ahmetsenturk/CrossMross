@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E948B8C2B38F3BD005CEEA7 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E948B8B2B38F3BD005CEEA7 /* Movement.swift */; };
+		7E948B8E2B398A47005CEEA7 /* WODListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E948B8D2B398A47005CEEA7 /* WODListView.swift */; };
+		7E948B902B39B3DC005CEEA7 /* CreateWODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E948B8F2B39B3DC005CEEA7 /* CreateWODView.swift */; };
+		7E948B992B3B16DB005CEEA7 /* WODDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E948B982B3B16DB005CEEA7 /* WODDetailsView.swift */; };
 		7EBBD5B32B362072009E2349 /* CrossMrossApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBD5B22B362072009E2349 /* CrossMrossApp.swift */; };
 		7EBBD5B52B362072009E2349 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBD5B42B362072009E2349 /* ContentView.swift */; };
 		7EBBD5B72B362073009E2349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBBD5B62B362073009E2349 /* Assets.xcassets */; };
 		7EBBD5BA2B362073009E2349 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBBD5B92B362073009E2349 /* Preview Assets.xcassets */; };
+		7EBBD5CA2B36474C009E2349 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBD5C92B36474C009E2349 /* Workout.swift */; };
+		7EBBD5CD2B36477E009E2349 /* WODCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBD5CC2B36477E009E2349 /* WODCardView.swift */; };
+		7EBBD5D32B3653DB009E2349 /* WODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBD5D22B3653DB009E2349 /* WODModel.swift */; };
+		7EBF4D642B4349A80089280A /* WorkoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D632B4349A80089280A /* WorkoutDetailsView.swift */; };
+		7EBF4D682B48A8C50089280A /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D672B48A8C50089280A /* AddWorkoutView.swift */; };
+		7EBF4D6B2B49F55A0089280A /* CreateWODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D6A2B49F55A0089280A /* CreateWODViewModel.swift */; };
+		7EBF4D6D2B5072750089280A /* EditWODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D6C2B5072750089280A /* EditWODView.swift */; };
+		7EBF4D6F2B55DE9A0089280A /* MaxRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */; };
+		7EBF4D712B55E0320089280A /* MaxRecordsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E948B8B2B38F3BD005CEEA7 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
+		7E948B8D2B398A47005CEEA7 /* WODListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODListView.swift; sourceTree = "<group>"; };
+		7E948B8F2B39B3DC005CEEA7 /* CreateWODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWODView.swift; sourceTree = "<group>"; };
+		7E948B982B3B16DB005CEEA7 /* WODDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODDetailsView.swift; sourceTree = "<group>"; };
 		7EBBD5AF2B362072009E2349 /* CrossMross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossMross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBBD5B22B362072009E2349 /* CrossMrossApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossMrossApp.swift; sourceTree = "<group>"; };
 		7EBBD5B42B362072009E2349 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7EBBD5B62B362073009E2349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EBBD5B92B362073009E2349 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7EBBD5C92B36474C009E2349 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		7EBBD5CC2B36477E009E2349 /* WODCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODCardView.swift; sourceTree = "<group>"; };
+		7EBBD5D22B3653DB009E2349 /* WODModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WODModel.swift; sourceTree = "<group>"; };
+		7EBF4D632B4349A80089280A /* WorkoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsView.swift; sourceTree = "<group>"; };
+		7EBF4D672B48A8C50089280A /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
+		7EBF4D6A2B49F55A0089280A /* CreateWODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWODViewModel.swift; sourceTree = "<group>"; };
+		7EBF4D6C2B5072750089280A /* EditWODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWODView.swift; sourceTree = "<group>"; };
+		7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRecord.swift; sourceTree = "<group>"; };
+		7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRecordsTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +77,9 @@
 		7EBBD5B12B362072009E2349 /* CrossMross */ = {
 			isa = PBXGroup;
 			children = (
+				7EBF4D692B49F5360089280A /* View Model */,
+				7EBBD5CB2B364761009E2349 /* Model */,
+				7EBBD5C52B3646F0009E2349 /* View */,
 				7EBBD5B22B362072009E2349 /* CrossMrossApp.swift */,
 				7EBBD5B42B362072009E2349 /* ContentView.swift */,
 				7EBBD5B62B362073009E2349 /* Assets.xcassets */,
@@ -65,6 +94,40 @@
 				7EBBD5B92B362073009E2349 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7EBBD5C52B3646F0009E2349 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E948B8D2B398A47005CEEA7 /* WODListView.swift */,
+				7EBBD5CC2B36477E009E2349 /* WODCardView.swift */,
+				7E948B982B3B16DB005CEEA7 /* WODDetailsView.swift */,
+				7E948B8F2B39B3DC005CEEA7 /* CreateWODView.swift */,
+				7EBF4D632B4349A80089280A /* WorkoutDetailsView.swift */,
+				7EBF4D672B48A8C50089280A /* AddWorkoutView.swift */,
+				7EBF4D6C2B5072750089280A /* EditWODView.swift */,
+				7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7EBBD5CB2B364761009E2349 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EBBD5D22B3653DB009E2349 /* WODModel.swift */,
+				7EBBD5C92B36474C009E2349 /* Workout.swift */,
+				7E948B8B2B38F3BD005CEEA7 /* Movement.swift */,
+				7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EBF4D692B49F5360089280A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EBF4D6A2B49F55A0089280A /* CreateWODViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +200,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E948B992B3B16DB005CEEA7 /* WODDetailsView.swift in Sources */,
+				7EBF4D6B2B49F55A0089280A /* CreateWODViewModel.swift in Sources */,
+				7E948B902B39B3DC005CEEA7 /* CreateWODView.swift in Sources */,
+				7EBF4D642B4349A80089280A /* WorkoutDetailsView.swift in Sources */,
+				7EBF4D682B48A8C50089280A /* AddWorkoutView.swift in Sources */,
 				7EBBD5B52B362072009E2349 /* ContentView.swift in Sources */,
 				7EBBD5B32B362072009E2349 /* CrossMrossApp.swift in Sources */,
+				7EBF4D6D2B5072750089280A /* EditWODView.swift in Sources */,
+				7E948B8C2B38F3BD005CEEA7 /* Movement.swift in Sources */,
+				7EBBD5CD2B36477E009E2349 /* WODCardView.swift in Sources */,
+				7EBBD5D32B3653DB009E2349 /* WODModel.swift in Sources */,
+				7EBF4D6F2B55DE9A0089280A /* MaxRecord.swift in Sources */,
+				7EBF4D712B55E0320089280A /* MaxRecordsTable.swift in Sources */,
+				7E948B8E2B398A47005CEEA7 /* WODListView.swift in Sources */,
+				7EBBD5CA2B36474C009E2349 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
