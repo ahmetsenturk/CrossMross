@@ -26,6 +26,10 @@ struct CrossMrossApp: App {
                     .tabItem {
                         Label("PRs", systemImage: "square.and.pencil")
                     }
+                TimerView()
+                    .tabItem {
+                        Label("Timer", systemImage: "timer")
+                    }
             }
         }
     }

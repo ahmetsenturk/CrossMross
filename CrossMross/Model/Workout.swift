@@ -103,7 +103,7 @@ class TABATA: Workout {
     }
 }
 
-enum WorkoutType: String {
+enum WorkoutType: String, CaseIterable {
     case AMRAP = "AMRAP"
     case EMOM = "EMOM"
     case FORTIME = "FOR TIME"
