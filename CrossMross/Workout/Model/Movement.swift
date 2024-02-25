@@ -16,6 +16,7 @@ class Movement: Identifiable {
     var equipment: String?
     
     init(name: String, reps: Int? = nil, weight: Double? = nil, distance: Double? = nil, duration: TimeInterval? = nil, equipment: String? = nil) {
+        // TODO: Add calories here
         self.name = name
         self.reps = reps
         self.weight = weight
@@ -40,5 +41,11 @@ class Movement: Identifiable {
         let m2 = Movement(name: "Push-Ups", reps: 10)
         let m3 = Movement(name: "Air Squat", reps: 15)
         return [m1, m2, m3]
+    }
+    
+    func getDisplayText() -> String {
+        // TODO: Burada movement tipine göre bir siplay text oluştur
+        // Örn. 400 M Run, 20 Cal Row, 12 Reps Deadlift (100 kg)
+        return ""
     }
 }

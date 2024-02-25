@@ -13,30 +13,25 @@ struct WorkoutDetailsView: View {
     
     var body: some View {
         Group {
-            VStack {
+            VStack(alignment: .leading) {
                 HStack {
-                    Text(workout.name)
-                        .font(.title3)
                     Text(workout.type.rawValue)
-                        .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(Color.purple)
+                        .font(.title3)
                     Spacer()
                     Image(systemName: "stopwatch")
                     Text(WOD.formatTimeInterval(workout.getTotalDuration()))
                         .font(.title3)
                 }
-                .padding(.bottom, 0.5)
+                .padding(.bottom, 3)
                 .bold()
-                VStack {
+                Text(workout.getDisplayText())
+                    .italic()
+                VStack(alignment: .leading) {
                     // TODO: Belki type'a göre bir icon olabilir
                     ForEach(workout.movements, id: \.name) { movement in
-                        Text(movement.name)
-                            .font(.caption)
-                            .fontWeight(.semibold)
+                        Text(movement.getDisplayText())
                     }
                 }
-                .padding()
-                
             }
             .padding()
         }

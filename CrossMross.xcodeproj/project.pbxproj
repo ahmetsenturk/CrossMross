@@ -27,6 +27,7 @@
 		7EBF4D6D2B5072750089280A /* EditWODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D6C2B5072750089280A /* EditWODView.swift */; };
 		7EBF4D6F2B55DE9A0089280A /* MaxRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */; };
 		7EBF4D712B55E0320089280A /* MaxRecordsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */; };
+		7EE8A62C2B8B6BC100FCFC5A /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8A62B2B8B6BC100FCFC5A /* CustomSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		7EBF4D6C2B5072750089280A /* EditWODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWODView.swift; sourceTree = "<group>"; };
 		7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRecord.swift; sourceTree = "<group>"; };
 		7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRecordsTable.swift; sourceTree = "<group>"; };
+		7EE8A62B2B8B6BC100FCFC5A /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +95,11 @@
 		7EBBD5B12B362072009E2349 /* CrossMross */ = {
 			isa = PBXGroup;
 			children = (
+				7EE8A62A2B8B6BA500FCFC5A /* Slider */,
+				7EE8A6242B8B6B5F00FCFC5A /* Record Table */,
+				7EE8A61F2B8B6B2000FCFC5A /* Workout */,
+				7EE8A61C2B8B6ADF00FCFC5A /* WOD */,
 				7E80C2EB2B88BE5D000FB011 /* Timer */,
-				7EBF4D692B49F5360089280A /* View Model */,
-				7EBBD5CB2B364761009E2349 /* Model */,
-				7EBBD5C52B3646F0009E2349 /* View */,
 				7EBBD5B22B362072009E2349 /* CrossMrossApp.swift */,
 				7EBBD5B42B362072009E2349 /* ContentView.swift */,
 				7EBBD5B62B362073009E2349 /* Assets.xcassets */,
@@ -113,38 +116,102 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7EBBD5C52B3646F0009E2349 /* View */ = {
+		7EE8A61C2B8B6ADF00FCFC5A /* WOD */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8A6292B8B6B8F00FCFC5A /* View Model */,
+				7EE8A61E2B8B6B1000FCFC5A /* Model */,
+				7EE8A61D2B8B6AEA00FCFC5A /* View */,
+			);
+			path = WOD;
+			sourceTree = "<group>";
+		};
+		7EE8A61D2B8B6AEA00FCFC5A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7E948B8D2B398A47005CEEA7 /* WODListView.swift */,
 				7EBBD5CC2B36477E009E2349 /* WODCardView.swift */,
 				7E948B982B3B16DB005CEEA7 /* WODDetailsView.swift */,
 				7E948B8F2B39B3DC005CEEA7 /* CreateWODView.swift */,
+				7EBF4D6C2B5072750089280A /* EditWODView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7EE8A61E2B8B6B1000FCFC5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EBBD5D22B3653DB009E2349 /* WODModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EE8A61F2B8B6B2000FCFC5A /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8A6212B8B6B3B00FCFC5A /* Model */,
+				7EE8A6202B8B6B2C00FCFC5A /* View */,
+			);
+			path = Workout;
+			sourceTree = "<group>";
+		};
+		7EE8A6202B8B6B2C00FCFC5A /* View */ = {
+			isa = PBXGroup;
+			children = (
 				7EBF4D632B4349A80089280A /* WorkoutDetailsView.swift */,
 				7EBF4D672B48A8C50089280A /* AddWorkoutView.swift */,
-				7EBF4D6C2B5072750089280A /* EditWODView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7EE8A6212B8B6B3B00FCFC5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EBBD5C92B36474C009E2349 /* Workout.swift */,
+				7E948B8B2B38F3BD005CEEA7 /* Movement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7EE8A6242B8B6B5F00FCFC5A /* Record Table */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8A6262B8B6B6D00FCFC5A /* Model */,
+				7EE8A6252B8B6B6800FCFC5A /* View */,
+			);
+			path = "Record Table";
+			sourceTree = "<group>";
+		};
+		7EE8A6252B8B6B6800FCFC5A /* View */ = {
+			isa = PBXGroup;
+			children = (
 				7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		7EBBD5CB2B364761009E2349 /* Model */ = {
+		7EE8A6262B8B6B6D00FCFC5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7EBBD5D22B3653DB009E2349 /* WODModel.swift */,
-				7EBBD5C92B36474C009E2349 /* Workout.swift */,
-				7E948B8B2B38F3BD005CEEA7 /* Movement.swift */,
 				7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7EBF4D692B49F5360089280A /* View Model */ = {
+		7EE8A6292B8B6B8F00FCFC5A /* View Model */ = {
 			isa = PBXGroup;
 			children = (
 				7EBF4D6A2B49F55A0089280A /* CreateWODViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		7EE8A62A2B8B6BA500FCFC5A /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8A62B2B8B6BC100FCFC5A /* CustomSlider.swift */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +286,7 @@
 			files = (
 				7E948B992B3B16DB005CEEA7 /* WODDetailsView.swift in Sources */,
 				7EBF4D6B2B49F55A0089280A /* CreateWODViewModel.swift in Sources */,
+				7EE8A62C2B8B6BC100FCFC5A /* CustomSlider.swift in Sources */,
 				7E948B902B39B3DC005CEEA7 /* CreateWODView.swift in Sources */,
 				7EBF4D642B4349A80089280A /* WorkoutDetailsView.swift in Sources */,
 				7EBF4D682B48A8C50089280A /* AddWorkoutView.swift in Sources */,

@@ -42,6 +42,10 @@ class Workout: WorkoutProtocol, Identifiable {
     func getTotalDuration() -> TimeInterval {
         fatalError()
     }
+    
+    func getDisplayText() -> String {
+        fatalError()
+    }
 }
 
 /// Child classes for specific workout types
@@ -56,6 +60,10 @@ class AMRAP: Workout {
     override func getTotalDuration() -> TimeInterval {
         return self.duration
     }
+    
+    override func getDisplayText() -> String {
+        return "As many rounds as possible in \(self.duration.description) mins."
+    }
 }
 
 class FORTIME: Workout {
@@ -68,6 +76,10 @@ class FORTIME: Workout {
     
     override func getTotalDuration() -> TimeInterval {
         return self.duration
+    }
+    
+    override func getDisplayText() -> String {
+        return "Complete the workout as fast as possible. Time cap - \(self.duration)."
     }
 }
 
@@ -83,6 +95,11 @@ class EMOM: Workout {
     
     override func getTotalDuration() -> TimeInterval {
         return self.forDuration
+    }
+    
+    override func getDisplayText() -> String {
+        // TODO: The following text could be enhanced
+        return "Every \(self.everyDuration) mins on \(self.forDuration)."
     }
 }
 
@@ -100,6 +117,11 @@ class TABATA: Workout {
     
     override func getTotalDuration() -> TimeInterval {
         return Double(self.rounds) * (workDuration + restDuration)
+    }
+    
+    override func getDisplayText() -> String {
+        // TODO: Fix me
+        return "For \(self.rounds.description) rounds - \(self.workDuration.description) seconds work \(self.restDuration.description) seconds rest"
     }
 }
 

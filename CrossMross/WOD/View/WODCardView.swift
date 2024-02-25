@@ -10,6 +10,7 @@ import SwiftUI
 
 struct WODCardView: View {
     var wod: WOD
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         Group {
@@ -47,7 +48,7 @@ struct WODCardView: View {
                 }
             }
             .padding()
-            .background(Color.white)
+            .background(colorScheme == .dark ? Color.black : Color.white)
             .cornerRadius(10)
             .shadow(color: .gray, radius: 5, x: 0, y: 2)
             .padding()

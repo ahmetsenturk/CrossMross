@@ -12,6 +12,7 @@ struct WODDetailsView: View {
     var wod: WOD
     @State private var edit = false
     @State private var showEditWorkout = false
+    @State private var isStarted = false
     // TODO: Edit sheeti ile create wod aynı olacak, bunun için bir dizayn düşünelim öncelik bu
     // Sonrasında timer çalıştırma işine bakalım, ona bakarken wod ve workoutları detaylandırmak da gerekecek. Yani öncelik wod workout yapısını iyice oturtmak ve timer işini yapmak
     
@@ -42,36 +43,36 @@ struct WODDetailsView: View {
                     }
                     .padding(.bottom, 5)
                     HStack {
-                        VStack {
+                        HStack {
                             Image(systemName: "stopwatch")
-                                .imageScale(.large)
+                                .imageScale(.medium)
                                 .bold()
                             Text(WOD.formatTimeInterval(wod.getTotalDuration()))
-                                .font(.title3)
                         }
-                        .foregroundStyle(.blue)
-                        .applyCustomModifier()
-                        .padding()
-                        VStack {
+                        .foregroundStyle(.white)
+                        .applyTagModifier(color: .blue)
+                        HStack {
                             Image(systemName: wod.getTypeIcon())
-                                .imageScale(.large)
+                                .imageScale(.medium)
                             Text(wod.getTypeName())
-                                .font(.title3)
                         }
-                        .foregroundStyle(.purple)
-                        .applyCustomModifier()
+                        .foregroundStyle(.white)
+                        .applyTagModifier(color: .purple)
+                        Spacer()
                     }
+                    .padding(.bottom, 30)
                     VStack {
-                        Text("Details")
-                            .font(.title2)
-                            .bold()
                         ForEach(wod.workouts, id: \.name) { workout in
                             WorkoutDetailsView(workout: workout)
                         }
                         // TODO: Buraya her bir workout için bir WorkoutDetails View'ı çağıracağız
                     }
                     .applyCustomModifier()
-                    // TODO: Buraya da bir tane start butonu koyup antrenmanı başlatacağız timer ile
+                    // FIXME: This is buggy when returning from the destination
+                    SlideToAction(completed: $isStarted)
+                        .navigationDestination(isPresented: $isStarted) {
+                            TimerView()
+                        }
                     Spacer()
                 }
                 .padding()
@@ -80,25 +81,33 @@ struct WODDetailsView: View {
                     EditWODView(wod: wod)
                 }
             }
-            .background(
-                Image(wod.getBackground())
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .edgesIgnoringSafeArea(.all)
-                    .opacity(0.2)
-            )
         }
     }
 }
 
 // Define your custom ViewModifier
 struct CustomModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+    
     func body(content: Content) -> some View {
         content
             .padding()
-            .background(Color.white)
+            .background(colorScheme == .dark ? Color.black : Color.white)
             .cornerRadius(10)
             .shadow(color: .gray, radius: 5, x: 0, y: 2)
+    }
+}
+
+struct TagModifier: ViewModifier {
+    var color: Color
+    @Environment(\.colorScheme) var colorScheme
+    
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .frame(height: 35)
+            .background(color)
+            .cornerRadius(15)
     }
 }
 
@@ -106,6 +115,10 @@ struct CustomModifier: ViewModifier {
 extension View {
     func applyCustomModifier() -> some View {
         self.modifier(CustomModifier())
+    }
+    
+    func applyTagModifier(color: Color) -> some View {
+        self.modifier(TagModifier(color: color))
     }
 }
 
