@@ -13,20 +13,14 @@ struct WODDetailsView: View {
     @State private var edit = false
     @State private var showEditWorkout = false
     @State private var isStarted = false
+    @Environment(\.colorScheme) var colorScheme
     // TODO: Edit sheeti ile create wod aynı olacak, bunun için bir dizayn düşünelim öncelik bu
-    // Sonrasında timer çalıştırma işine bakalım, ona bakarken wod ve workoutları detaylandırmak da gerekecek. Yani öncelik wod workout yapısını iyice oturtmak ve timer işini yapmak
     
-    
-    
-    // TODO: This view needs to be scrollable as well
-    // TODO: Put the name in the middle
-    // Handle the long names for the workouts
-    // Omit the tab item when navigating into this view
     
     var body: some View {
-        Group {
+        NavigationStack {
             ScrollView {
-                VStack {
+                VStack(alignment: .leading) {
                     HStack {
                         Text(wod.name)
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -42,37 +36,36 @@ struct WODDetailsView: View {
                         }
                     }
                     .padding(.bottom, 5)
-                    HStack {
+                    VStack(alignment: .leading) {
                         HStack {
                             Image(systemName: "stopwatch")
                                 .imageScale(.medium)
                                 .bold()
                             Text(WOD.formatTimeInterval(wod.getTotalDuration()))
                         }
-                        .foregroundStyle(.white)
-                        .applyTagModifier(color: .blue)
+                        .foregroundStyle(.blue)
                         HStack {
                             Image(systemName: wod.getTypeIcon())
                                 .imageScale(.medium)
                             Text(wod.getTypeName())
                         }
-                        .foregroundStyle(.white)
-                        .applyTagModifier(color: .purple)
-                        Spacer()
+                        .foregroundStyle(.purple)
                     }
-                    .padding(.bottom, 30)
+                    .padding()
                     VStack {
                         ForEach(wod.workouts, id: \.name) { workout in
                             WorkoutDetailsView(workout: workout)
+                                .padding()
                         }
-                        // TODO: Buraya her bir workout için bir WorkoutDetails View'ı çağıracağız
+                        Spacer()
                     }
-                    .applyCustomModifier()
+                    .frame(minHeight: 400) // TODO: Fix this constant
+                    .background(
+                        Image(colorScheme == .dark ? "blackboard" : "whiteboard")
+                            .resizable()
+                    )
                     // FIXME: This is buggy when returning from the destination
                     SlideToAction(completed: $isStarted)
-                        .navigationDestination(isPresented: $isStarted) {
-                            TimerView()
-                        }
                     Spacer()
                 }
                 .padding()
@@ -81,6 +74,9 @@ struct WODDetailsView: View {
                     EditWODView(wod: wod)
                 }
             }
+        }
+        .navigationDestination(isPresented: $isStarted) {
+            TimerView()
         }
     }
 }
