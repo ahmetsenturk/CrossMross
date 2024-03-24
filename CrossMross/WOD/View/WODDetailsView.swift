@@ -14,8 +14,6 @@ struct WODDetailsView: View {
     @State private var showEditWorkout = false
     @State private var isStarted = false
     @Environment(\.colorScheme) var colorScheme
-    // TODO: Edit sheeti ile create wod aynı olacak, bunun için bir dizayn düşünelim öncelik bu
-    
     
     var body: some View {
         NavigationStack {
@@ -64,9 +62,6 @@ struct WODDetailsView: View {
                         Image(colorScheme == .dark ? "blackboard" : "whiteboard")
                             .resizable()
                     )
-                    // FIXME: This is buggy when returning from the destination
-                    SlideToAction(completed: $isStarted)
-                    Spacer()
                 }
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -74,6 +69,17 @@ struct WODDetailsView: View {
                     EditWODView(wod: wod)
                 }
             }
+            HStack {
+                Spacer()
+                Button(action: {
+                    self.isStarted = true
+                }) {
+                    Text("Let's start")
+                        .font(.custom("Lemon Tuesday", size: 30))
+                }
+                Spacer()
+            }
+            .padding()
         }
         .navigationDestination(isPresented: $isStarted) {
             TimerView()
