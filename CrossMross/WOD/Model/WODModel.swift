@@ -21,12 +21,12 @@ import Observation
     }
     
     static func mockWOD() -> WOD {
-        return WOD(name: "The Seven", type: WODType.ENDURANCE, workouts: Workout.mockWorkouts())
+        return WOD(name: "Cindy", type: WODType.ENDURANCE, workouts: Workout.mockCindyWorkouts())
     }
     
     static func mockWODs() -> [WOD] {
-        let w1 = WOD(name: "The Seven", type: WODType.ENDURANCE, workouts: Workout.mockCindyWorkouts())
-        let w2 = WOD(name: "Cindy", type: WODType.ENDURANCE, workouts: Workout.mockWorkouts())
+        let w1 = WOD(name: "The Seven", type: WODType.ENDURANCE, workouts: Workout.mockWorkouts())
+        let w2 = WOD(name: "Cindy", type: WODType.ENDURANCE, workouts: Workout.mockCindyWorkouts())
         return [w1, w2]
     }
     

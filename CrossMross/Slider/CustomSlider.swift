@@ -27,7 +27,8 @@ struct SlideToAction: View {
         ZStack {
             Capsule()
                 .frame(width: sliderWidth, height: 60)
-                .foregroundColor(completed ? .green : .secondary)
+                .foregroundStyle(completed ? .green : .secondary)
+                .opacity(0.2)
                 .overlay(
                     Text("slide to start")
                         .font(.headline)
@@ -38,7 +39,7 @@ struct SlideToAction: View {
                 .foregroundColor(.white)
                 .shadow(radius: 4)
                 .overlay(
-                    Image(systemName: "forward.fill")
+                    Image(systemName: "figure.run")
                         .foregroundStyle(.black)
                 )
                 .offset(x: slideAmount)

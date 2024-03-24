@@ -28,6 +28,9 @@
 		7EBF4D6F2B55DE9A0089280A /* MaxRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */; };
 		7EBF4D712B55E0320089280A /* MaxRecordsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */; };
 		7EE8A62C2B8B6BC100FCFC5A /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE8A62B2B8B6BC100FCFC5A /* CustomSlider.swift */; };
+		7EE8A6352B8CDBE000FCFC5A /* LemonTuesday.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8A6342B8CDBE000FCFC5A /* LemonTuesday.otf */; };
+		7EE8A6372B8CDBEF00FCFC5A /* PeanutButter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8A6362B8CDBEF00FCFC5A /* PeanutButter.ttf */; };
+		7EE8A63A2B8CE0D300FCFC5A /* Catways.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EE8A6392B8CE0D300FCFC5A /* Catways.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,10 @@
 		7EBF4D6E2B55DE9A0089280A /* MaxRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRecord.swift; sourceTree = "<group>"; };
 		7EBF4D702B55E0320089280A /* MaxRecordsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRecordsTable.swift; sourceTree = "<group>"; };
 		7EE8A62B2B8B6BC100FCFC5A /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		7EE8A6342B8CDBE000FCFC5A /* LemonTuesday.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonTuesday.otf; sourceTree = "<group>"; };
+		7EE8A6362B8CDBEF00FCFC5A /* PeanutButter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PeanutButter.ttf; sourceTree = "<group>"; };
+		7EE8A6382B8CDC9B00FCFC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7EE8A6392B8CE0D300FCFC5A /* Catways.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Catways.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +102,8 @@
 		7EBBD5B12B362072009E2349 /* CrossMross */ = {
 			isa = PBXGroup;
 			children = (
+				7EE8A6382B8CDC9B00FCFC5A /* Info.plist */,
+				7EE8A62D2B8CDA3100FCFC5A /* Font */,
 				7EE8A62A2B8B6BA500FCFC5A /* Slider */,
 				7EE8A6242B8B6B5F00FCFC5A /* Record Table */,
 				7EE8A61F2B8B6B2000FCFC5A /* Workout */,
@@ -214,6 +223,16 @@
 			path = Slider;
 			sourceTree = "<group>";
 		};
+		7EE8A62D2B8CDA3100FCFC5A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7EE8A6392B8CE0D300FCFC5A /* Catways.ttf */,
+				7EE8A6342B8CDBE000FCFC5A /* LemonTuesday.otf */,
+				7EE8A6362B8CDBEF00FCFC5A /* PeanutButter.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,7 +291,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE8A63A2B8CE0D300FCFC5A /* Catways.ttf in Resources */,
 				7EBBD5BA2B362073009E2349 /* Preview Assets.xcassets in Resources */,
+				7EE8A6352B8CDBE000FCFC5A /* LemonTuesday.otf in Resources */,
+				7EE8A6372B8CDBEF00FCFC5A /* PeanutButter.ttf in Resources */,
 				7EBBD5B72B362073009E2349 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +461,7 @@
 				DEVELOPMENT_TEAM = 3A2H9H6S67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrossMross/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +491,7 @@
 				DEVELOPMENT_TEAM = 3A2H9H6S67;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrossMross/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
